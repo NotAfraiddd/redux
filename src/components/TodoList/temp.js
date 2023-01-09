@@ -13,6 +13,7 @@ const rootReducer = (state = initValue, action) => {
         case 'todoList/increment':
             return {
                 ...state,
+                value: state.value + action.payload
             }
         default:
             return state;
@@ -20,3 +21,20 @@ const rootReducer = (state = initValue, action) => {
 }
 
 // ACTION
+
+const INCREMENT = {
+    type: 'todoList/increment',
+    payload: 10,
+}
+// Action creators
+const incrementCreator = (data) => {
+    return {
+        type: 'todoList/increment',
+        payload: data,
+    }
+}
+
+incrementCreator(10)
+
+// dispatch
+// dispatch(INCREMENT)

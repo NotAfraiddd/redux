@@ -4,3 +4,10 @@ export const addTodo = (data) => {
         payload: data,
     }
 }
+
+export const searchTodo = (data) => {
+    return {
+        type: 'filters/searchTodo',
+        payload: data,
+    }
+}

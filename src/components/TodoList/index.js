@@ -37,22 +37,13 @@ export default function TodoList() {
         setPriority(value)
     }
 
-    // // save local storage
-    // const [job, setJob] = useState(
-    //     // vào localStorage lấy dữ liệu( dạng chuỗi JSON) và biến nó thành 1 đối tượng
-    //     () => JSON.parse(localStorage.getItem('job')) || [])
-    // useEffect(() => {
-    //     // tại local thì phải gán nó vào key là job, và biến đổi nó thành chuỗi JSON
-    //     localStorage.setItem('job', JSON.stringify(job))
-    // }, [job])
-
 
     return (
         <Row style={{ height: 'calc(100% - 40px)' }}>
             <Col span={24} style={{ height: 'calc(100% - 40px)', overflowY: 'auto' }}>
                 {
                     todoList.map(
-                        todo => <Todo key={todo.id} name={todo.name} priority={todo.priority} />)
+                        todo => <Todo key={todo.id} name={todo.name} priority={todo.priority} completed={todo.completed} />)
                 }
             </Col>
             <Col span={24}>

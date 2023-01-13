@@ -1,13 +1,27 @@
 export const addTodo = (data) => {
     return {
-        type: 'todoList/addTodo',
+        type: "todoList/addTodo",
         payload: data,
-    }
-}
+    };
+};
 
 export const searchTodo = (data) => {
     return {
-        type: 'filters/searchTodo',
+        type: "filters/searchTodo",
         payload: data,
-    }
-}
+    };
+};
+
+export const statusFilterTodo = (data) => {
+    return {
+        type: "filters/statusFilterTodo",
+        payload: data,
+    };
+};
+
+export const priorityFilterTodo = (data) => {
+    return {
+        type: "filters/priorityFilterTodo",
+        payload: data,
+    };
+};

@@ -5,6 +5,13 @@ export const addTodo = (data) => {
     };
 };
 
+export const toggleTodoStatus = (dataID) => {
+    return {
+        type: "todoList/toggleTodoStatus",
+        payload: dataID,
+    };
+};
+
 export const searchTodo = (data) => {
     return {
         type: "filters/searchTodo",
